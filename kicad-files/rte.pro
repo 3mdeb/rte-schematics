@@ -1,4 +1,4 @@
-update=Wed 03 Apr 2019 12:24:36 CEST
+update=Wed 03 Apr 2019 12:50:22 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -31,7 +31,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=/home/aromat/projects/3mdeb/rte_opi_v1.0.0/
+PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
