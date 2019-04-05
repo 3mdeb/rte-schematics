@@ -126,3 +126,15 @@ v. 0.5.3
 
 Modified:
 * enlarged added holes
+
+v. 1.0.0
+--------
+
+Added:
+
+* RoHS logo
+* Crossed Wheelie Bin logo
+
+Modified:
+
+* footprints of the pin headers

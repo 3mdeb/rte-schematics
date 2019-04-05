@@ -1,55 +1,21 @@
-EESchema Schematic File Version 2
-LIBS:remote_development_board-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:relays
-LIBS:mechanical
-LIBS:ftdi
-LIBS:conn2
-LIBS:remote_development_board-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:rte-cache
+EELAYER 26 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Remote Testing Environment for Orange Pi platform"
+Date "2019-01-16"
+Rev "v1.0.0"
+Comp "3MDEB Embedded Systems Consulting"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 598DF823
 P 10450 4300
 F 0 "#PWR01" H 10450 4050 50  0001 C CNN
@@ -58,17 +24,6 @@ F 2 "" H 10450 4300 50  0001 C CNN
 F 3 "" H 10450 4300 50  0001 C CNN
 	1    10450 4300
 	1    0    0    -1  
-$EndComp
-$Comp
-L C C1
-U 1 1 599AAA80
-P 10850 1250
-F 0 "C1" H 10875 1350 50  0000 L CNN
-F 1 "0.1uF" H 10875 1150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 10850 1250 50  0001 C CNN
-F 3 "" H 10850 1250 50  0001 C CNN
-	1    10850 1250
-	0    -1   -1   0   
 $EndComp
 Text GLabel 2450 2450 2    60   Input ~ 0
 SPI1_CS
@@ -81,12 +36,12 @@ SPI1_SCLK
 Text GLabel 1850 2050 0    60   Input ~ 0
 UART2_CTS
 $Comp
-L Conn_02x13_Odd_Even J5
+L rte:Conn_02x13_Odd_Even J5
 U 1 1 599AB872
 P 2100 1950
 F 0 "J5" H 2100 2650 50  0000 C CNN
 F 1 "ORANGE_PI_ZERO_CONN1" V 2150 1950 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x13_Pitch2.54mm" H 2100 800 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x13_P2.54mm_Vertical" H 2100 800 50  0001 C CNN
 F 3 "" H 2100 800 50  0001 C CNN
 	1    2100 1950
 	1    0    0    -1  
@@ -98,7 +53,7 @@ TWI1_SCK
 Text GLabel 2450 2050 2    60   Input ~ 0
 TWI1_SDA
 $Comp
-L +3V3 #PWR02
+L power:+3V3 #PWR02
 U 1 1 599EBBDF
 P 10450 1150
 F 0 "#PWR02" H 10450 1000 50  0001 C CNN
@@ -109,23 +64,23 @@ F 3 "" H 10450 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x13 J3
+L rte:Conn_01x13 J3
 U 1 1 599EBDE9
 P 4550 1950
 F 0 "J3" H 4550 2650 50  0000 C CNN
 F 1 "ORANGE_PI_ZERO_CONN2" V 4650 1950 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm" H 4550 1950 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x13_P2.54mm_Vertical" H 4550 1950 50  0001 C CNN
 F 3 "" H 4550 1950 50  0001 C CNN
 	1    4550 1950
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_02x04_Odd_Even J7
+L rte:Conn_02x04_Odd_Even J7
 U 1 1 599EC409
 P 6650 4250
 F 0 "J7" H 6650 4500 50  0000 C CNN
 F 1 "SPI_OUTPUT" H 6650 3900 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm" H 6650 3050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 6650 3050 50  0001 C CNN
 F 3 "" H 6650 3050 50  0001 C CNN
 	1    6650 4250
 	1    0    0    -1  
@@ -139,18 +94,18 @@ SPI1_MOSI
 Text GLabel 6350 4350 0    60   Input ~ 0
 SPI1_MISO
 $Comp
-L Conn_01x03 J4
+L rte:Conn_01x03 J4
 U 1 1 599EE2A5
 P 1800 4300
 F 0 "J4" H 1800 4500 50  0000 C CNN
 F 1 "ORANGE_PI_ZERO_SERIAL_IN" V 1900 4300 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 1800 4300 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 1800 4300 50  0001 C CNN
 F 3 "" H 1800 4300 50  0001 C CNN
 	1    1800 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x03 J2
+L rte:Conn_01x03 J2
 U 1 1 599EE4EA
 P 1100 4300
 F 0 "J2" H 1100 4500 50  0000 C CNN
@@ -161,12 +116,12 @@ F 3 "" H 1100 4300 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Conn_01x12 J11
+L rte:Conn_01x12 J11
 U 1 1 599EE63C
 P 10400 6100
-F 0 "J11" H 10400 6450 50  0000 C CNN
+F 0 "J11" H 10400 6700 50  0000 C CNN
 F 1 "OC_BUFFER_OUTPUT" V 10500 6100 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x12_Pitch2.54mm" H 10400 6100 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical" H 10400 6100 50  0001 C CNN
 F 3 "" H 10400 6100 50  0001 C CNN
 	1    10400 6100
 	1    0    0    -1  
@@ -196,12 +151,12 @@ APU_J10_CLR
 Text GLabel 10100 6500 0    60   Input ~ 0
 APU_J4_MODESW
 $Comp
-L Conn_01x03 J1
+L rte:Conn_01x03 J1
 U 1 1 599EED49
 P 7550 6100
 F 0 "J1" H 7550 6300 50  0000 C CNN
 F 1 "APU_LED_INPUT" V 7650 6100 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 7550 6100 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7550 6100 50  0001 C CNN
 F 3 "" H 7550 6100 50  0001 C CNN
 	1    7550 6100
 	1    0    0    -1  
@@ -217,7 +172,7 @@ UART2_RX
 Text GLabel 1850 1950 0    60   Input ~ 0
 UART2_TX
 $Comp
-L +5V #PWR03
+L power:+5V #PWR03
 U 1 1 599EF6B4
 P 2600 1100
 F 0 "#PWR03" H 2600 950 50  0001 C CNN
@@ -228,7 +183,7 @@ F 3 "" H 2600 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR04
+L power:+5V #PWR04
 U 1 1 599F10FC
 P 3650 1100
 F 0 "#PWR04" H 3650 950 50  0001 C CNN
@@ -239,7 +194,7 @@ F 3 "" H 3650 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 599F1255
 P 4150 2750
 F 0 "#PWR05" H 4150 2500 50  0001 C CNN
@@ -258,7 +213,7 @@ USB_DM3
 Text GLabel 4250 2050 0    60   Input ~ 0
 USB_DP3
 $Comp
-L USB_A-RESCUE-remote_development_board J6
+L rte:USB_A-RESCUE-remote_development_board J6
 U 1 1 599F1A45
 P 3550 5950
 F 0 "J6" H 3350 6400 50  0000 L CNN
@@ -269,7 +224,7 @@ F 3 "" H 3700 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_A-RESCUE-remote_development_board J8
+L rte:USB_A-RESCUE-remote_development_board J8
 U 1 1 599F1E5B
 P 4850 5950
 F 0 "J8" H 4650 6400 50  0000 L CNN
@@ -280,7 +235,7 @@ F 3 "" H 5000 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L power:GND #PWR06
 U 1 1 599F1F4C
 P 3450 6800
 F 0 "#PWR06" H 3450 6550 50  0001 C CNN
@@ -291,7 +246,7 @@ F 3 "" H 3450 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 599F1F78
 P 4750 6800
 F 0 "#PWR07" H 4750 6550 50  0001 C CNN
@@ -302,7 +257,7 @@ F 3 "" H 4750 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR08
+L power:+5V #PWR08
 U 1 1 599F21D2
 P 3950 5400
 F 0 "#PWR08" H 3950 5250 50  0001 C CNN
@@ -313,7 +268,7 @@ F 3 "" H 3950 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR09
+L power:+5V #PWR09
 U 1 1 599F21FE
 P 5250 5400
 F 0 "#PWR09" H 5250 5250 50  0001 C CNN
@@ -331,38 +286,30 @@ Text GLabel 5200 6050 2    60   Input ~ 0
 USB_DM3
 Text GLabel 5200 5950 2    60   Input ~ 0
 USB_DP3
-Text Notes 13000 11050 0    60   ~ 0
-01.02.2018
-Text Notes 12200 10900 0    60   ~ 0
-Remote Testing Environment
-Text Notes 15400 11050 0    60   ~ 0
-0.5.3
-Text Notes 11900 10400 0    120  ~ 0
-Remote Testing Environment schematic \nv.0.5.3
 $Comp
-L Barrel_Jack J13
+L rte:Barrel_Jack J13
 U 1 1 59A3E1A6
 P 3650 9100
 F 0 "J13" H 3650 9295 50  0000 C CNN
 F 1 "APU_POWER_SUPPLY_OUTPUT" H 3650 8945 50  0000 C CNN
-F 2 "Connectors:Barrel_Jack_CUI_PJ-102AH" H 3650 9100 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 3650 9100 50  0001 C CNN
 F 3 "" H 3650 9100 50  0001 C CNN
 	1    3650 9100
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Barrel_Jack J12
+L rte:Barrel_Jack J12
 U 1 1 59A3E1D7
 P 2550 9100
 F 0 "J12" H 2550 9295 50  0000 C CNN
 F 1 "APU_POWER_SUPPLY_INPUT" H 2550 8945 50  0000 C CNN
-F 2 "Connectors:Barrel_Jack_CUI_PJ-102AH" H 2550 9100 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 2550 9100 50  0001 C CNN
 F 3 "" H 2550 9100 50  0001 C CNN
 	1    2550 9100
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 59A42830
 P 11900 4300
 F 0 "#PWR010" H 11900 4050 50  0001 C CNN
@@ -373,18 +320,7 @@ F 3 "" H 11900 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
-U 1 1 59C107FF
-P 14150 1250
-F 0 "C2" H 14175 1350 50  0000 L CNN
-F 1 "0.1uF" H 14175 1150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 14150 1250 50  0001 C CNN
-F 3 "" H 14150 1250 50  0001 C CNN
-	1    14150 1250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L +3V3 #PWR011
+L power:+3V3 #PWR011
 U 1 1 59C10805
 P 13750 1200
 F 0 "#PWR011" H 13750 1050 50  0001 C CNN
@@ -395,18 +331,7 @@ F 3 "" H 13750 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SN74LS06 U2
-U 1 1 598DF6DA
-P 10450 2450
-F 0 "U2" H 10750 3400 50  0000 C CNN
-F 1 "SN74LS06" H 10700 850 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 10450 2300 50  0001 C CNN
-F 3 "" H 10450 2300 50  0001 C CNN
-	1    10450 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR012
+L power:GND #PWR012
 U 1 1 59C112C5
 P 13750 4300
 F 0 "#PWR012" H 13750 4050 50  0001 C CNN
@@ -417,18 +342,18 @@ F 3 "" H 13750 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCP23017 U1
+L rte:MCP23017 U1
 U 1 1 59C13275
 P 6600 2200
 F 0 "U1" H 6500 3225 50  0000 R CNN
 F 1 "MCP23017" H 6500 3150 50  0000 R CNN
-F 2 "Housings_SOIC:SOIC-28W_7.5x17.9mm_Pitch1.27mm" H 6650 1250 50  0001 L CNN
+F 2 "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm" H 6650 1250 50  0001 L CNN
 F 3 "" H 6850 3200 50  0001 C CNN
 	1    6600 2200
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR013
+L power:GND #PWR013
 U 1 1 59C140A9
 P 5950 3400
 F 0 "#PWR013" H 5950 3150 50  0001 C CNN
@@ -443,29 +368,29 @@ TWI1_SCK
 Text GLabel 6000 2600 0    60   Input ~ 0
 TWI1_SDA
 $Comp
-L MAX3232 U3
+L rte:MAX3232 U3
 U 1 1 59C16CB3
 P 13850 7150
 F 0 "U3" H 13750 8275 50  0000 R CNN
 F 1 "MAX3232" H 13750 8200 50  0000 R CNN
-F 2 "SMD_Packages:SO-16-N" H 13900 6100 50  0001 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 13900 6100 50  0001 L CNN
 F 3 "" H 13850 7250 50  0001 C CNN
 	1    13850 7150
 	1    0    0    -1  
 $EndComp
 $Comp
-L DB9_Male_MountingHoles J14
+L rte:DB9_Male_MountingHoles J14
 U 1 1 59C16F8A
 P 10550 9500
 F 0 "J14" H 10550 10150 50  0000 C CNN
 F 1 "RS232_OUT" H 10550 10075 50  0000 C CNN
-F 2 "Connectors:DB9FD" H 10550 9500 50  0001 C CNN
+F 2 "Connect:DB9MD" H 10550 9500 50  0001 C CNN
 F 3 "" H 10550 9500 50  0001 C CNN
 	1    10550 9500
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR014
+L power:GND #PWR014
 U 1 1 59C1A2D0
 P 13850 8450
 F 0 "#PWR014" H 13850 8200 50  0001 C CNN
@@ -476,7 +401,7 @@ F 3 "" H 13850 8450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR015
+L power:GND #PWR015
 U 1 1 59C1A316
 P 15550 8500
 F 0 "#PWR015" H 15550 8250 50  0001 C CNN
@@ -487,62 +412,18 @@ F 3 "" H 15550 8500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L rte:C C3
 U 1 1 59C1B621
-P 14100 5800
-F 0 "C4" H 14125 5900 50  0000 L CNN
-F 1 "0.1uF" H 14125 5700 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 14100 5800 50  0001 C CNN
-F 3 "" H 14100 5800 50  0001 C CNN
-	1    14100 5800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L C C3
-U 1 1 59C1B813
 P 12850 6400
 F 0 "C3" H 12875 6500 50  0000 L CNN
-F 1 "0.1uF" H 12875 6300 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 12850 6400 50  0001 C CNN
+F 1 "100nF" H 12875 6300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 12850 6400 50  0001 C CNN
 F 3 "" H 12850 6400 50  0001 C CNN
 	1    12850 6400
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C5
-U 1 1 59C1B8A7
-P 14850 6400
-F 0 "C5" H 14875 6500 50  0000 L CNN
-F 1 "0.1uF" H 14875 6300 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 14850 6400 50  0001 C CNN
-F 3 "" H 14850 6400 50  0001 C CNN
-	1    14850 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C6
-U 1 1 59C1B91D
-P 14950 6750
-F 0 "C6" H 14975 6850 50  0000 L CNN
-F 1 "0.1uF" H 14975 6650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 14950 6750 50  0001 C CNN
-F 3 "" H 14950 6750 50  0001 C CNN
-	1    14950 6750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L C C7
-U 1 1 59C1C012
-P 14950 7050
-F 0 "C7" H 14975 7150 50  0000 L CNN
-F 1 "0.1uF" H 14975 6950 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 14950 7050 50  0001 C CNN
-F 3 "" H 14950 7050 50  0001 C CNN
-	1    14950 7050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR016
+L power:GND #PWR016
 U 1 1 59C1CDA8
 P 10550 10200
 F 0 "#PWR016" H 10550 9950 50  0001 C CNN
@@ -577,7 +458,7 @@ RS232_TX
 Text GLabel 10100 9600 0    60   Input ~ 0
 RS232_RTS
 $Comp
-L GND #PWR017
+L power:GND #PWR017
 U 1 1 59C20C94
 P 9300 10200
 F 0 "#PWR017" H 9300 9950 50  0001 C CNN
@@ -600,7 +481,7 @@ OC_OUT5
 Text GLabel 10100 5900 0    60   Input ~ 0
 OC_OUT6
 $Comp
-L HF3-51-RESCUE-remote_development_board K1
+L rte:HF3-51-RESCUE-remote_development_board K1
 U 1 1 59C14414
 P 2450 8100
 F 0 "K1" H 2900 8250 50  0000 L CNN
@@ -633,12 +514,12 @@ APU_LED3
 Text GLabel 2450 1750 2    60   Input ~ 0
 RELAY_CTR
 $Comp
-L Conn_01x04 J9
+L rte:Conn_01x04 J9
 U 1 1 59C19F3C
 P 5650 8550
 F 0 "J9" H 5650 8750 50  0000 C CNN
 F 1 "I2C_BUS_OUTPUT" V 5750 8550 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 5650 8550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5650 8550 50  0001 C CNN
 F 3 "" H 5650 8550 50  0001 C CNN
 	1    5650 8550
 	1    0    0    -1  
@@ -648,7 +529,7 @@ TWI1_SCK
 Text GLabel 5250 8650 0    60   Input ~ 0
 TWI1_SDA
 $Comp
-L GND #PWR018
+L power:GND #PWR018
 U 1 1 59C1A0FB
 P 5200 8950
 F 0 "#PWR018" H 5200 8700 50  0001 C CNN
@@ -659,7 +540,7 @@ F 3 "" H 5200 8950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L D_ALT D1
+L rte:D_ALT D1
 U 1 1 59C17CBB
 P 1700 8100
 F 0 "D1" H 1700 8200 50  0000 C CNN
@@ -670,7 +551,7 @@ F 3 "" H 1700 8100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR019
+L power:+5V #PWR019
 U 1 1 59C17E6D
 P 1950 7600
 F 0 "#PWR019" H 1950 7450 50  0001 C CNN
@@ -681,7 +562,7 @@ F 3 "" H 1950 7600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Q_NMOS_DGS-RESCUE-remote_development_board Q1
+L rte:Q_NMOS_DGS-RESCUE-remote_development_board Q1
 U 1 1 59C17FB0
 P 1600 8700
 F 0 "Q1" H 1800 8750 50  0000 L CNN
@@ -692,7 +573,7 @@ F 3 "" H 1600 8700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR020
+L power:GND #PWR020
 U 1 1 59C1804D
 P 1700 9450
 F 0 "#PWR020" H 1700 9200 50  0001 C CNN
@@ -705,12 +586,12 @@ $EndComp
 Text GLabel 1250 8700 0    60   Input ~ 0
 RELAY_CTR
 $Comp
-L R R3
+L rte:R R3
 U 1 1 59C1990A
 P 1350 9000
 F 0 "R3" V 1430 9000 50  0000 C CNN
 F 1 "10k" V 1350 9000 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 1280 9000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1280 9000 50  0001 C CNN
 F 3 "" H 1350 9000 50  0001 C CNN
 	1    1350 9000
 	1    0    0    -1  
@@ -728,7 +609,7 @@ OC_OUT5
 Text GLabel 14350 3650 2    60   Input ~ 0
 OC_OUT6
 $Comp
-L +3V3 #PWR021
+L power:+3V3 #PWR021
 U 1 1 59C330EB
 P 6600 1000
 F 0 "#PWR021" H 6600 850 50  0001 C CNN
@@ -739,7 +620,7 @@ F 3 "" H 6600 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR022
+L power:+3V3 #PWR022
 U 1 1 59C332E7
 P 5200 8200
 F 0 "#PWR022" H 5200 8050 50  0001 C CNN
@@ -750,7 +631,7 @@ F 3 "" H 5200 8200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR023
+L power:+3V3 #PWR023
 U 1 1 59C33E57
 P 13850 5600
 F 0 "#PWR023" H 13850 5450 50  0001 C CNN
@@ -761,18 +642,7 @@ F 3 "" H 13850 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SN74LS06 U4
-U 1 1 59C3B358
-P 13750 2450
-F 0 "U4" H 14050 3400 50  0000 C CNN
-F 1 "SN74LS06" H 14000 850 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 13750 2300 50  0001 C CNN
-F 3 "" H 13750 2300 50  0001 C CNN
-	1    13750 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR024
+L power:GND #PWR024
 U 1 1 59C3C355
 P 7750 4650
 F 0 "#PWR024" H 7750 4400 50  0001 C CNN
@@ -783,7 +653,7 @@ F 3 "" H 7750 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mounting_Hole MK1
+L rte:Mounting_Hole MK1
 U 1 1 59C29835
 P 2250 10550
 F 0 "MK1" H 2250 10750 50  0000 C CNN
@@ -794,7 +664,7 @@ F 3 "" H 2250 10550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mounting_Hole MK3
+L rte:Mounting_Hole MK3
 U 1 1 59C2C3CE
 P 2850 10550
 F 0 "MK3" H 2850 10750 50  0000 C CNN
@@ -805,7 +675,7 @@ F 3 "" H 2850 10550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mounting_Hole MK2
+L rte:Mounting_Hole MK2
 U 1 1 59C2C4CC
 P 4050 10550
 F 0 "MK2" H 4050 10750 50  0000 C CNN
@@ -816,7 +686,7 @@ F 3 "" H 4050 10550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mounting_Hole MK4
+L rte:Mounting_Hole MK4
 U 1 1 59C2C4D2
 P 4650 10550
 F 0 "MK4" H 4650 10750 50  0000 C CNN
@@ -827,7 +697,7 @@ F 3 "" H 4650 10550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mounting_Hole MK5
+L rte:Mounting_Hole MK5
 U 1 1 59C2EFF9
 P 3450 10550
 F 0 "MK5" H 3450 10750 50  0000 C CNN
@@ -838,7 +708,7 @@ F 3 "" H 3450 10550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mounting_Hole MK6
+L rte:Mounting_Hole MK6
 U 1 1 59C2EFFF
 P 5250 10550
 F 0 "MK6" H 5250 10750 50  0000 C CNN
@@ -895,7 +765,7 @@ PA_EINT10
 Text GLabel 2450 1850 2    60   Input ~ 0
 PA_EINT7
 $Comp
-L GND #PWR025
+L power:GND #PWR025
 U 1 1 59C49ED6
 P 3100 2750
 F 0 "#PWR025" H 3100 2500 50  0001 C CNN
@@ -906,7 +776,7 @@ F 3 "" H 3100 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR026
+L power:GND #PWR026
 U 1 1 59C4A213
 P 1150 2750
 F 0 "#PWR026" H 1150 2500 50  0001 C CNN
@@ -921,7 +791,7 @@ PA_EINT10
 Text GLabel 6000 1800 0    60   Input ~ 0
 PA_EINT7
 $Comp
-L Mounting_Hole MK7
+L rte:Mounting_Hole MK7
 U 1 1 59C4C943
 P 5850 10550
 F 0 "MK7" H 5850 10750 50  0000 C CNN
@@ -932,7 +802,7 @@ F 3 "" H 5850 10550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR027
+L power:GND #PWR027
 U 1 1 59C4E364
 P 1450 4650
 F 0 "#PWR027" H 1450 4400 50  0001 C CNN
@@ -947,29 +817,29 @@ E_GPB4
 Text GLabel 9900 2950 0    60   Input ~ 0
 E_GPB5
 $Comp
-L LED_ALT D2
+L rte:LED_ALT D2
 U 1 1 59F4BA18
 P 1150 6350
 F 0 "D2" H 1150 6450 50  0000 C CNN
 F 1 "RED_LED_5V" H 1150 6250 50  0000 C CNN
-F 2 "Diodes_SMD:D_1206" H 1150 6350 50  0001 C CNN
+F 2 "Diode_SMD:D_1206_3216Metric" H 1150 6350 50  0001 C CNN
 F 3 "" H 1150 6350 50  0001 C CNN
 	1    1150 6350
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_ALT D3
+L rte:LED_ALT D3
 U 1 1 59F4BBFD
 P 1850 6350
 F 0 "D3" H 1850 6450 50  0000 C CNN
 F 1 "ORANGE_LED_3V3" H 1850 6250 50  0000 C CNN
-F 2 "Diodes_SMD:D_1206" H 1850 6350 50  0001 C CNN
+F 2 "Diode_SMD:D_1206_3216Metric" H 1850 6350 50  0001 C CNN
 F 3 "" H 1850 6350 50  0001 C CNN
 	1    1850 6350
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +3V3 #PWR028
+L power:+3V3 #PWR028
 U 1 1 59F4C7C1
 P 1850 5450
 F 0 "#PWR028" H 1850 5300 50  0001 C CNN
@@ -980,7 +850,7 @@ F 3 "" H 1850 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR029
+L power:+5V #PWR029
 U 1 1 59F4CFC4
 P 1150 5400
 F 0 "#PWR029" H 1150 5250 50  0001 C CNN
@@ -991,29 +861,29 @@ F 3 "" H 1150 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L rte:R R1
 U 1 1 59F4E281
 P 1150 5800
 F 0 "R1" V 1230 5800 50  0000 C CNN
 F 1 "300" V 1150 5800 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 1080 5800 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1080 5800 50  0001 C CNN
 F 3 "" H 1150 5800 50  0001 C CNN
 	1    1150 5800
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L rte:R R2
 U 1 1 59F4E684
 P 1850 5800
 F 0 "R2" V 1930 5800 50  0000 C CNN
 F 1 "150" V 1850 5800 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 1780 5800 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1780 5800 50  0001 C CNN
 F 3 "" H 1850 5800 50  0001 C CNN
 	1    1850 5800
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR030
+L power:GND #PWR030
 U 1 1 59F4EAF2
 P 1500 6800
 F 0 "#PWR030" H 1500 6550 50  0001 C CNN
@@ -1024,7 +894,7 @@ F 3 "" H 1500 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR031
+L power:+3V3 #PWR031
 U 1 1 59F74E25
 P 1250 1200
 F 0 "#PWR031" H 1250 1050 50  0001 C CNN
@@ -1035,18 +905,18 @@ F 3 "" H 1250 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x02 J15
+L rte:Conn_01x02 J15
 U 1 1 59FB4D8C
 P 3200 4150
 F 0 "J15" H 3200 4250 50  0000 C CNN
 F 1 "5V_POWER_SUPPLY" H 3200 3950 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 3200 4150 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3200 4150 50  0001 C CNN
 F 3 "" H 3200 4150 50  0001 C CNN
 	1    3200 4150
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR032
+L power:+5V #PWR032
 U 1 1 59FB5465
 P 2750 3850
 F 0 "#PWR032" H 2750 3700 50  0001 C CNN
@@ -1057,7 +927,7 @@ F 3 "" H 2750 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR033
+L power:GND #PWR033
 U 1 1 59FB54EB
 P 2750 4650
 F 0 "#PWR033" H 2750 4400 50  0001 C CNN
@@ -1068,7 +938,7 @@ F 3 "" H 2750 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_OTG-RESCUE-remote_development_board J17
+L rte:USB_OTG-RESCUE-remote_development_board J17
 U 1 1 59FB62A8
 P 4000 4150
 F 0 "J17" H 3800 4600 50  0000 L CNN
@@ -1079,7 +949,7 @@ F 3 "" H 4150 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR034
+L power:GND #PWR034
 U 1 1 59FB63F7
 P 3900 4650
 F 0 "#PWR034" H 3900 4400 50  0001 C CNN
@@ -1090,7 +960,7 @@ F 3 "" H 3900 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR035
+L power:+5V #PWR035
 U 1 1 59FB6480
 P 4600 3850
 F 0 "#PWR035" H 4600 3700 50  0001 C CNN
@@ -1105,12 +975,12 @@ E_GPA1
 Text GLabel 7150 8450 0    60   Input ~ 0
 E_GPA0
 $Comp
-L Conn_01x04 J10
+L rte:Conn_01x04 J10
 U 1 1 5A0C8F09
 P 7500 8550
 F 0 "J10" H 7500 8750 50  0000 C CNN
 F 1 "EXP_GPIO_OUTPUT" V 7600 8550 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 7500 8550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7500 8550 50  0001 C CNN
 F 3 "" H 7500 8550 50  0001 C CNN
 	1    7500 8550
 	1    0    0    -1  
@@ -1137,7 +1007,7 @@ NoConn ~ 6950 4450
 Text Notes 600  700  0    60   ~ 0
 ORANGE PI ZERO HEADERS CONNECTION
 $Comp
-L +3V3 #PWR036
+L power:+3V3 #PWR036
 U 1 1 599EBB95
 P 1750 1200
 F 0 "#PWR036" H 1750 1050 50  0001 C CNN
@@ -1148,7 +1018,7 @@ F 3 "" H 1750 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR037
+L power:GND #PWR037
 U 1 1 59C47C46
 P 1850 2750
 F 0 "#PWR037" H 1850 2500 50  0001 C CNN
@@ -1207,7 +1077,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 1400 6100 1400
 Wire Wire Line
-	6600 1000 6600 1200
+	6600 1000 6600 1100
 Wire Wire Line
 	9300 9100 9300 10200
 Wire Wire Line
@@ -1244,7 +1114,7 @@ Wire Wire Line
 	13950 5800 13850 5800
 Connection ~ 13850 5800
 Wire Wire Line
-	13850 5600 13850 5950
+	13850 5600 13850 5800
 Wire Wire Line
 	15100 6750 15550 6750
 Wire Wire Line
@@ -1277,14 +1147,14 @@ Connection ~ 5950 2900
 Wire Wire Line
 	6100 2900 5950 2900
 Wire Wire Line
-	5950 2800 5950 3400
+	5950 2800 5950 2900
 Wire Wire Line
 	6100 2800 5950 2800
 Wire Wire Line
-	10450 1150 10450 1350
+	10450 1150 10450 1250
 Connection ~ 13750 1250
 Wire Wire Line
-	13750 1200 13750 1350
+	13750 1200 13750 1250
 Wire Wire Line
 	14000 1250 13750 1250
 Wire Wire Line
@@ -1295,7 +1165,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 9000 3350 9000
 Wire Wire Line
-	2850 9100 3350 9100
+	2850 9100 2950 9100
 Wire Wire Line
 	3000 9000 2850 9000
 Connection ~ 3250 9100
@@ -1383,9 +1253,9 @@ Wire Wire Line
 Wire Wire Line
 	2600 1350 2400 1350
 Wire Wire Line
-	2600 1100 2600 1450
+	2600 1100 2600 1350
 Wire Wire Line
-	3100 1550 3100 2750
+	3100 1550 3100 1950
 Wire Wire Line
 	3100 1550 2400 1550
 Wire Wire Line
@@ -1403,14 +1273,14 @@ Wire Wire Line
 Wire Wire Line
 	4250 2050 4350 2050
 Wire Wire Line
-	3450 6350 3450 6800
+	3450 6350 3450 6400
 Wire Wire Line
 	3450 6400 3550 6400
 Wire Wire Line
 	3550 6400 3550 6350
 Connection ~ 3450 6400
 Wire Wire Line
-	4750 6350 4750 6800
+	4750 6350 4750 6400
 Wire Wire Line
 	4750 6400 4850 6400
 Wire Wire Line
@@ -1449,9 +1319,9 @@ Wire Wire Line
 Wire Wire Line
 	2750 7750 3200 7750
 Wire Wire Line
-	1700 8900 1700 9450
+	1700 8900 1700 9200
 Wire Wire Line
-	1700 8250 1700 8500
+	1700 8250 1700 8450
 Wire Wire Line
 	2250 8400 2250 8450
 Wire Wire Line
@@ -1460,14 +1330,14 @@ Connection ~ 1700 8450
 Wire Wire Line
 	1700 7950 1700 7700
 Wire Wire Line
-	1700 7700 2250 7700
+	1700 7700 1950 7700
 Wire Wire Line
 	2250 7700 2250 7800
 Wire Wire Line
 	1950 7600 1950 7700
 Connection ~ 1950 7700
 Wire Wire Line
-	1250 8700 1400 8700
+	1250 8700 1350 8700
 Wire Wire Line
 	2650 8850 3000 8850
 Wire Wire Line
@@ -1547,7 +1417,7 @@ Wire Wire Line
 Wire Wire Line
 	6000 1900 6100 1900
 Wire Wire Line
-	1300 4200 1600 4200
+	1300 4200 1450 4200
 Wire Wire Line
 	1150 5400 1150 5650
 Wire Wire Line
@@ -1559,7 +1429,7 @@ Wire Wire Line
 Wire Wire Line
 	1150 6500 1150 6650
 Wire Wire Line
-	1150 6650 1850 6650
+	1150 6650 1500 6650
 Wire Wire Line
 	1850 6650 1850 6500
 Wire Wire Line
@@ -1582,7 +1452,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 3950 4600 3850
 Wire Wire Line
-	3900 4550 3900 4650
+	3900 4550 3900 4600
 Wire Wire Line
 	3900 4600 4000 4600
 Wire Wire Line
@@ -1712,7 +1582,7 @@ Wire Notes Line
 Text Notes 8300 4850 0    60   ~ 0
 OPEN COLLECTOR BUFFERS OUTPUT HEADER
 Wire Wire Line
-	15550 5800 15550 8500
+	15550 5800 15550 6750
 Wire Notes Line
 	550  9850 550  11150
 Wire Notes Line
@@ -1772,7 +1642,7 @@ Wire Wire Line
 Wire Wire Line
 	11900 1250 11900 4300
 $Comp
-L GND #PWR038
+L power:GND #PWR038
 U 1 1 5A74C396
 P 15200 4300
 F 0 "#PWR038" H 15200 4050 50  0001 C CNN
@@ -1790,4 +1660,142 @@ Wire Wire Line
 	15200 1250 15200 4300
 Connection ~ 15550 6750
 Connection ~ 15550 7050
+Wire Wire Line
+	2600 1350 2600 1450
+Wire Wire Line
+	6600 1100 6600 1200
+Wire Wire Line
+	13850 5800 13850 5950
+Wire Wire Line
+	5950 3250 5950 3400
+Wire Wire Line
+	5950 3000 5950 3250
+Wire Wire Line
+	5950 2900 5950 3000
+Wire Wire Line
+	3250 9100 3350 9100
+Wire Wire Line
+	2950 9100 3250 9100
+Wire Wire Line
+	3450 6400 3450 6800
+Wire Wire Line
+	4750 6400 4750 6800
+Wire Wire Line
+	1700 8450 1700 8500
+Wire Wire Line
+	1950 7700 2250 7700
+Wire Wire Line
+	1350 8700 1400 8700
+Wire Wire Line
+	1700 9200 1700 9450
+Wire Wire Line
+	1500 6650 1850 6650
+Wire Wire Line
+	3900 4600 3900 4650
+Wire Wire Line
+	3100 1950 3100 2250
+Wire Wire Line
+	3100 2250 3100 2750
+Wire Wire Line
+	1450 4200 1600 4200
+Wire Wire Line
+	15550 6750 15550 7050
+Wire Wire Line
+	15550 7050 15550 8500
+$Comp
+L 3mdeb:74LS06 U2
+U 1 1 5C419F77
+P 10450 2800
+F 0 "U2" H 10450 4300 60  0000 C CNN
+F 1 "74LS06" H 10450 4194 60  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10450 3000 60  0001 C CNN
+F 3 "" H 10450 3000 60  0001 C CNN
+	1    10450 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10450 1250 10450 1500
+Wire Wire Line
+	10450 4050 10450 4300
+$Comp
+L 3mdeb:74LS06 U4
+U 1 1 5C443BC6
+P 13750 2800
+F 0 "U4" H 13750 4300 60  0000 C CNN
+F 1 "74LS06" H 13750 4194 60  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 13750 3000 60  0001 C CNN
+F 3 "" H 13750 3000 60  0001 C CNN
+	1    13750 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13750 1250 13750 1500
+Wire Wire Line
+	13750 4050 13750 4300
+$Comp
+L rte:C C5
+U 1 1 5C408BF5
+P 14850 6400
+F 0 "C5" H 14875 6500 50  0000 L CNN
+F 1 "100nF" H 14875 6300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 14850 6400 50  0001 C CNN
+F 3 "" H 14850 6400 50  0001 C CNN
+	1    14850 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L rte:C C6
+U 1 1 5C45B679
+P 14950 6750
+F 0 "C6" H 14975 6850 50  0000 L CNN
+F 1 "100nF" H 14975 6650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 14950 6750 50  0001 C CNN
+F 3 "" H 14950 6750 50  0001 C CNN
+	1    14950 6750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L rte:C C7
+U 1 1 5C45B826
+P 14950 7050
+F 0 "C7" H 14975 7150 50  0000 L CNN
+F 1 "100nF" H 14975 6950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 14950 7050 50  0001 C CNN
+F 3 "" H 14950 7050 50  0001 C CNN
+	1    14950 7050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L rte:C C4
+U 1 1 5C45BFB0
+P 14100 5800
+F 0 "C4" H 14125 5900 50  0000 L CNN
+F 1 "100nF" H 14125 5700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 14100 5800 50  0001 C CNN
+F 3 "" H 14100 5800 50  0001 C CNN
+	1    14100 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L rte:C C1
+U 1 1 5C45CB81
+P 10850 1250
+F 0 "C1" H 10875 1350 50  0000 L CNN
+F 1 "100nF" H 10875 1150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 10850 1250 50  0001 C CNN
+F 3 "" H 10850 1250 50  0001 C CNN
+	1    10850 1250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L rte:C C2
+U 1 1 5C45CEF6
+P 14150 1250
+F 0 "C2" H 14175 1350 50  0000 L CNN
+F 1 "100nF" H 14175 1150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 14150 1250 50  0001 C CNN
+F 3 "" H 14150 1250 50  0001 C CNN
+	1    14150 1250
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
