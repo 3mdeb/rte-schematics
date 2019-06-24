@@ -138,3 +138,24 @@ Added:
 Modified:
 
 * footprints of the pin headers
+
+v. 1.1.0
+--------
+
+Added:
+
+* 3.3V voltage stabilizer
+* 1.8V voltage stabilizer
+* A SPI logic level converter
+* A Voltage selector based on a relay
+* An Open Hardware logo
+* An UART header selector
+* A `MAX3232` enable jumper
+* A relay state diode
+* A circuit for cut-off the current flow
+* A `.gitignore` file
+
+Modified:
+
+* OC header (from now on, there are only 9 open-collector pins free to use)
+* Resistors and capacitors footprints
