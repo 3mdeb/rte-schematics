@@ -1,4 +1,4 @@
-update=Wed 03 Apr 2019 12:50:22 CEST
+update=Mon 24 Jun 2019 15:27:22 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -31,7 +31,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=./rte.pdf
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
