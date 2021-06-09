@@ -11,5 +11,5 @@ If you want to read more about this project, here are some useful links:
   - [RteCtrl](https://github.com/3mdeb/RteCtrl) - binary for power management on
   board ([MIT license](https://github.com/3mdeb/RteCtrl/blob/master/LICENSE))
 * Datasheets (under CC BY-SA 4.0 International License):
-  - [RTE v1.0.0 datasheet](https://cloud.3mdeb.com/index.php/s/kEJnCMXYbzsfBL6)
-  - [RTE v1.1.0 datasheet](https://cloud.3mdeb.com/index.php/s/eAAwMZc85Q2TBzj)
+  - [RTE v1.0.0 datasheet](https://cloud.3mdeb.com/index.php/s/NQCAHopjSpMGT9z)
+  - [RTE v1.1.0 datasheet](https://docs.dasharo.com/transparent-validation/rte/v1.1.0/specification/)
