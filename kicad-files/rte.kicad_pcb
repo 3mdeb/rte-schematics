@@ -19462,7 +19462,7 @@
 			)
 		)
 	)
-	(gr_text "RTE board v1.1.0"
+	(gr_text "RTE board v1.1.1"
 		(at 118.2243 96.9264 0)
 		(layer "F.SilkS")
 		(uuid "00000000-0000-0000-0000-00005cdc5628")
