@@ -1,3 +1,5 @@
 (sym_lib_table
-  (lib (name rte)(type Legacy)(uri ${KIPRJMOD}/libraries/symbols/rte.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "rte")(type "Legacy")(uri "${KIPRJMOD}/libraries/symbols/rte.lib")(options "")(descr ""))
+  (lib (name "rte-rescue")(type "KiCad")(uri "${KIPRJMOD}/rte-rescue.kicad_sym")(options "")(descr ""))
 )
